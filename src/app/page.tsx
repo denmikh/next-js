@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
         <p>
-          Get started by editing&nbsp;
+          Get started in staging
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
     </main>
