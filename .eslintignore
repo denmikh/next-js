@@ -1,0 +1,4 @@
+backend/static/
+node_modules/
+/* remove when cypress does not generate these files */
+cypress/**/examples/

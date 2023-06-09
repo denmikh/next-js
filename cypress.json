@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://localhost:10000",
+  "blacklistHosts": ["*.google-analytics.com", "*.hotjar.com"],
+  "projectId": "j2zfym"
+}

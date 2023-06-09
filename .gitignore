@@ -1,0 +1,25 @@
+.idea/
+backend/static/
+
+environment.js
+npm-debug.log
+.DS_Store
+.vscode
+.env
+
+coverage/
+
+# node
+node_modules
+
+.cache-loader
+stats.json
+
+# cypress.io
+cypress/fixtures/example.json
+cypress/integration/examples/
+cypress/screenshots
+cypress/videos
+
+# eslint
+.eslintcache
