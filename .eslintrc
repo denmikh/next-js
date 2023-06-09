@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    ".rules.eslintrc"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["jest", "react", "sort-keys-fix"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["__mocks__/**/*", "__tests__/**/*"],
+      "rules": {
+        "react/jsx-key": "off"
+      },
+      "env": {
+        "jest": true
+      }
+    },
+    {
+      "files": ["**/*.spec.js"],
+      "rules": {
+        "jest/valid-expect": 0
+      }
+    },
+    {
+      "files": ["**/*.spec.js"],
+      "rules": {
+        "jest/valid-expect": 0
+      }
+    }
+  ]
+}

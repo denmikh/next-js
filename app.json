@@ -1,0 +1,26 @@
+{
+  "name": "shell",
+  "description": "A react & koa based ticket store.",
+  "keywords": [
+    "tickets"
+  ],
+  "website": "https://friends.ticketevolution.com",
+  "repository": "https://github.com/ticketevolution/shell",
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "hobby"
+    }
+  },
+  "env": {
+    "PG_DATABASE": {
+      "required": true
+    },
+    "PG_USERNAME": {
+      "required": true
+    },
+    "PG_PASSWORD": {
+      "required": true
+    }
+  }
+}

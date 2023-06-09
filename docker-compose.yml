@@ -1,0 +1,49 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:9.4
+    environment:
+      - POSTGRES_USER=shell
+      - POSTGRES_PASSWORD=shell
+      - POSTGRES_DB=shell
+    ports:
+      - 5432
+      - 10864:5432
+  app:
+    image: shell
+    environment:
+      - PG_USERNAME=shell
+      - PG_DATABASE=shell
+      - PG_PASSWORD=shell
+      - PG_TEST_USERNAME=shell
+      - PG_TEST_DATABASE=shell
+      - PG_TEST_PASSWORD=shell
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PORT=80
+    env_file:
+      - ./.env
+    build: &app_build
+      context: .
+      dockerfile: ./Dockerfile
+      cache_from:
+        - shell:latest
+      target: dev
+    platform: linux/amd64
+    ports:
+      - 10000:80 # example affialiate whitelabel site
+      - 10001:80 # example brokerage whitelabel site
+      - 9229:9229 # remote node debugger
+    depends_on:
+      - postgres
+    volumes:
+      - .env:/usr/src/shell/.env
+      - ./frontend:/usr/src/shell/frontend:cached
+      - ./coverage:/usr/src/shell/coverage
+      - ./backend:/usr/src/shell/backend:cached
+      - ./__tests__:/usr/src/shell/__tests__:cached
+      - ./__mocks__:/usr/src/shell/__mocks__:cached
+      - ./scripts:/usr/src/shell/scripts:cached
+    command:
+      ['./scripts/wait-for-it.sh', 'postgres:5432', '--', 'npm', 'run', 'debug']

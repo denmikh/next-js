@@ -1,0 +1,83 @@
+{
+  "rules": {
+    "accessor-pairs": "off",
+    "array-bracket-newline": ["error", "consistent"],
+    "array-callback-return": ["error", { "allowImplicit": true }],
+    "block-scoped-var": "error",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "complexity": ["off", 11],
+    "consistent-return": "error",
+    "curly": ["error", "all"],
+    "default-case": ["error", { "commentPattern": "^no default$" }],
+    "dot-notation": ["error", { "allowKeywords": true }],
+    "dot-location": ["error", "property"],
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "guard-for-in": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-alert": "warn",
+    "no-caller": "error",
+    "no-case-declarations": "error",
+    "no-console": "warn",
+    "no-div-regex": "off",
+    "no-eq-null": "off",
+    "no-eval": "error",
+    "no-empty-function": [
+      "error",
+      {
+        "allow": ["arrowFunctions", "functions", "methods"]
+      }
+    ],
+    "no-empty-pattern": "error",
+    "no-extend-native": "error",
+    "no-extra-bind": "error",
+    "no-extra-label": "error",
+    "no-fallthrough": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-nested-ternary": "off",
+    "no-plusplus": "error",
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "object-property-newline": [
+      "error",
+      {
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "react/prop-types": "off",
+    "semi": ["error", "always"],
+    "semi-spacing": ["error", { "before": false, "after": true }],
+    "semi-style": ["error", "last"],
+    "sort-keys-fix/sort-keys-fix": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "space-in-parens": ["error", "never"],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true,
+        "overrides": {
+          "return": { "after": true },
+          "throw": { "after": true },
+          "case": { "after": true }
+        }
+      }
+    ]
+  }
+}
